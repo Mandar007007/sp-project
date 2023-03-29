@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vibrate on Load</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body onload="vibrate()">
+	<h1>Vibrate on Load</h1>
+	<script>
+		function vibrate() {
+			if ("vibrate" in navigator) {
+				navigator.vibrate(200);
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<html>
+<head>
+{% load static %}
+</head>
+<body>
+    <img id="hi" src="{% static 'banner.jpg' %}" alt="random image"></img>
+
+    <script>
+        const img = ['banner.jpg', 'fb.png', 'gp.png', 'hill1.png'];
+        let index = Math.floor(Math.random() * img.length);
+        let ele = document.getElementById('hi');
+        ele.src = "{% static '' %}" + img[index];
+    </script>
+</body>
+</html>

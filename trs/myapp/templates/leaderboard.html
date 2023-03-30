@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <title>Document</title>
 </head>
 <style>
@@ -691,7 +692,7 @@ button, select {
           <div class="c-list__grid">
             <div class="c-flag c-place u-bg--transparent">{{forloop.counter}}</div>
             <div class="c-media">
-              <img class="c-avatar c-media__img" src="{{member.img}}" />
+              <img class="c-avatar c-media__img" src="https://previews.123rf.com/images/vecstock/vecstock2003/vecstock200302929/141552365-happy-emoji-face-flat-style-icon-design-cartoon-expression-cute-emoticon-character-profile-facial.jpg" />
               <div class="c-media__content">
                 <div class="c-media__title">{{member.username}}</div>
                 <a class="c-media__link u-text--small" href="https://instagram.com/${member.handle}" target="_blank">@mandar_007</a>
@@ -703,8 +704,8 @@ button, select {
                 <form method="post" action="/myapp/rate">
                   {% csrf_token %}
                   <input type="text" name="id" value="{{member.username}}" hidden>
-                  <input type="checkbox" name="check"></input>
-                  <input type="submit"></input></form>
+                  <input type="checkbox" name="check"><i class="fas fa-star"></i></input>
+                  <input type="submit" value="Submit"></input></form>
               </div>
             </div>
           </div>

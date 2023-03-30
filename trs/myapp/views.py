@@ -14,13 +14,20 @@ def register(request):
         password2 = request.POST['pass2']
         email = request.POST['email']
 
-        role = 1
+        role = 'u'
+
+        if 'teacher' in request.POST:
+            role = 't'
+            print("hi")
 
         if role == 'u':
             new_account = Account(username=username,password=password1,email=email,userrole=0)
         else:
             new_account = Account(username=username,password=password1,email=email,userrole=1)
+            teacher_obj = Teacher(username=username,subject="maths",score=0,rank=12)
         new_account.save()
+        if(role is 't'):
+            teacher_obj.save()
         
         return redirect('/myapp/register')
     return render(request,'register.html')
